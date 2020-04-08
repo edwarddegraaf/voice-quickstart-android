@@ -27,6 +27,12 @@ allprojects {
             url 'https://maven.google.com/'
             name 'Google'
         }
+
+        /*
+        flatDir {
+            //dirs '/Users/kbagchi/projects/client/github/5.x/AS3.5/twilio-voice-android/voice/build/outputs/aar/'
+            dirs 'libs'
+        }*/
     }
 }
 
