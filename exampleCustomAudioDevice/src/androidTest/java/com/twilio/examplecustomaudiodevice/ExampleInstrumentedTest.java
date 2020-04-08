@@ -1,4 +1,4 @@
-package com.example.examplecustomaudiodevice;
+package com.twilio.examplecustomaudiodevice;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.examplecustomaudiodevice", appContext.getPackageName());
+        assertEquals("com.twilio.examplecustomaudiodevice", appContext.getPackageName());
     }
 }

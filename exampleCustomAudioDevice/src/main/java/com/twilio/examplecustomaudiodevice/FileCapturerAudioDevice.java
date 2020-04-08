@@ -1,4 +1,4 @@
-package com.example.examplecustomaudiodevice;
+package com.twilio.examplecustomaudiodevice;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -140,15 +140,15 @@ public class FileCapturerAudioDevice implements AudioDevice {
         this.rendererHandler = new android.os.Handler(rendererThread.getLooper());
     }
 
-    public void switchInput(boolean isMusic) {
-        isMusicPlaying = isMusic;
-        if (isMusic) {
-            capturerHandler.removeCallbacks(fileCapturerRunnable);
-            capturerHandler.post(microphoneCapturerRunnable);
-        } else {
+    public void switchInput(boolean playMusic) {
+        isMusicPlaying = playMusic;
+        if (playMusic) {
             initializeStreams();
             stopRecording();
             capturerHandler.post(fileCapturerRunnable);
+        } else {
+            capturerHandler.removeCallbacks(fileCapturerRunnable);
+            capturerHandler.post(microphoneCapturerRunnable);
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.examplecustomaudiodevice;
+package com.twilio.examplecustomaudiodevice;
 
 import org.junit.Test;
 
